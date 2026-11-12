@@ -160,3 +160,34 @@ nav a:not(.nav-cta):hover::after { transform: scaleX(1); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Footer links */
+.site-footer__links a { color: var(--paper); text-decoration: none; border-bottom: 1px solid #6b665c; }
+.site-footer__links a:hover { border-color: var(--paper); }
+.site-footer a img { display: block; }
+
+/* Legal pages */
+nav a[aria-current="page"]::after { transform: scaleX(1); }
+.legal { padding: clamp(40px, 7vw, 88px) 0 clamp(56px, 8vw, 96px); }
+.legal__wrap { max-width: 760px; }
+.legal__head { border-bottom: 2px solid var(--ink); padding-bottom: 24px; margin-bottom: 32px; }
+.legal h1 { font-size: clamp(2.4rem, 1.8rem + 3vw, 4rem); margin-bottom: 12px; }
+.legal__date { color: var(--muted); font-style: italic; margin: 0; }
+.legal h2 { font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem); margin: 0 0 14px; }
+.legal h3 { font-size: 1.2rem; margin: 26px 0 8px; }
+.legal section { padding-top: 36px; margin-top: 36px; border-top: 1px solid var(--rule); }
+.legal p, .legal li { color: var(--ink-2); }
+.legal ul, .legal ol { padding-left: 1.3em; margin: 0 0 1em; }
+.legal li { margin-bottom: 6px; }
+.legal a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.legal address { font-style: normal; color: var(--ink-2); line-height: 1.8; }
+.legal__summary { background: var(--paper-2); border: 1px solid var(--rule); border-left: 4px solid var(--ink); padding: 24px clamp(18px, 3vw, 32px) 12px; margin-bottom: 32px; }
+.legal__summary h2 { font-size: 1.3rem; }
+.legal__toc ol { columns: 2; column-gap: 32px; }
+.legal__toc li { break-inside: avoid; }
+.legal__toc a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+.legal__toc a:hover { border-color: var(--ink); }
+.callout { background: var(--ink); color: var(--paper) !important; padding: 18px 22px; border-radius: 4px; }
+.callout strong { color: var(--paper); }
+.caps { font-size: .95em; }
+@media (max-width: 560px) { .legal__toc ol { columns: 1; } }

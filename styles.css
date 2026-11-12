@@ -142,7 +142,8 @@ nav a:not(.nav-cta):hover::after { transform: scaleX(1); }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 720px) {
-  nav li:not(:last-child) { display: none; }
+  .nav-hide-sm { display: none; }
+  nav ul { gap: 14px; }
   .trio__grid { grid-template-columns: 1fr; }
   .trio__item + .trio__item { border-left: 0; border-top: 1px solid var(--rule); padding-top: 28px; margin-top: 20px; }
   .services__list { grid-template-columns: 1fr; }
@@ -191,3 +192,31 @@ nav a[aria-current="page"]::after { transform: scaleX(1); }
 .callout strong { color: var(--paper); }
 .caps { font-size: .95em; }
 @media (max-width: 560px) { .legal__toc ol { columns: 1; } }
+
+/* Apps */
+.apps { padding: clamp(64px, 10vw, 128px) 0; }
+.section-sub { color: var(--muted); font-style: italic; margin: 10px 0 0; }
+.apps__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 28px); }
+.app { display: flex; flex-direction: column; background: #fbf8f1; border: 1.5px solid var(--ink); border-radius: 6px; padding: clamp(22px, 2.5vw, 30px); box-shadow: 6px 6px 0 var(--ink); transition: transform .2s ease, box-shadow .2s ease; }
+.app:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+.app__tag { font-family: var(--display); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 600; color: var(--muted); margin-bottom: 10px; }
+.app h3 { font-size: clamp(1.5rem, 1.2rem + 0.8vw, 1.9rem); font-weight: 800; margin-bottom: 12px; }
+.app > p { color: var(--ink-2); }
+.app__facts { list-style: none; padding: 14px 0 0; margin: auto 0 14px; border-top: 1px solid var(--rule); font-size: .95em; }
+.app__facts li { padding-left: 1.2em; position: relative; margin-bottom: 4px; color: var(--ink-2); }
+.app__facts li::before { content: "\2014"; position: absolute; left: 0; color: var(--muted); }
+.app__links { margin: 0; font-size: .92rem; color: var(--muted); }
+.app__links a { color: var(--ink); text-underline-offset: 3px; }
+
+/* Legal strip */
+.legal-strip { padding: clamp(40px, 6vw, 64px) 0 0; }
+.legal-strip__links { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.legal-strip__links a { display: block; text-decoration: none; border: 1px solid var(--rule); border-left: 4px solid var(--ink); padding: 18px 22px; background: var(--paper-2); transition: border-color .2s, background .2s; }
+.legal-strip__links a:hover { background: #e6dcc6; }
+.legal-strip__links strong { display: block; font-family: var(--display); font-size: 1.2rem; margin-bottom: 4px; }
+.legal-strip__links strong::after { content: " \2192"; }
+.legal-strip__links span { color: var(--ink-2); font-size: .95em; }
+
+@media (max-width: 900px) { .apps__grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+@media (max-width: 600px) { .legal-strip__links { grid-template-columns: 1fr; } }
+@media (max-width: 400px) { nav a { font-size: .9rem; } .brand span { display: none; } }

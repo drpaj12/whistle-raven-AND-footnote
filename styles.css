@@ -263,3 +263,11 @@ nav a[aria-current="page"]::after { transform: scaleX(1); }
 .app__play .play-badge img { height: 46px; }
 .site-footer__tm { font-size: .8rem; opacity: .75; }
 .product-note { margin: 24px 0 0; color: var(--muted); font-style: italic; max-width: 60ch; }
+
+/* Two-Stick SportsBall */
+.game-icon { width: 128px; height: 128px; border-radius: 28px; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); display: block; }
+.product-quote { font-family: var(--display); font-size: 1.25rem; font-weight: 600; margin-top: 24px; }
+.product-quote span { font-family: inherit; font-weight: 400; font-size: 1rem; color: var(--muted); white-space: nowrap; }
+.shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(14px, 2vw, 24px); }
+.shots img { width: 100%; height: auto; display: block; border: 2px solid var(--ink); border-radius: 6px; box-shadow: 6px 6px 0 var(--ink); background: #0b0f1a; }
+@media (max-width: 720px) { .shots { grid-template-columns: 1fr; } }

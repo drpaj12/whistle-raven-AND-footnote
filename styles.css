@@ -262,3 +262,4 @@ nav a[aria-current="page"]::after { transform: scaleX(1); }
 .app__play .play-badge { margin-top: 6px; }
 .app__play .play-badge img { height: 46px; }
 .site-footer__tm { font-size: .8rem; opacity: .75; }
+.product-note { margin: 24px 0 0; color: var(--muted); font-style: italic; max-width: 60ch; }

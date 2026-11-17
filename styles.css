@@ -252,3 +252,13 @@ nav a[aria-current="page"]::after { transform: scaleX(1); }
 @media (max-width: 720px) {
   .product-cols, .people { grid-template-columns: 1fr; }
 }
+
+/* Google Play badge */
+.play-badge { display: inline-block; line-height: 0; margin-top: 14px; border-radius: 8px; }
+.play-badge img { height: 54px; width: auto; display: block; }
+.play-badge:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.app__status { margin: 4px 0 0; font-family: var(--display); font-weight: 600; font-size: .9rem; }
+.app__play { margin: 0 0 12px; }
+.app__play .play-badge { margin-top: 6px; }
+.app__play .play-badge img { height: 46px; }
+.site-footer__tm { font-size: .8rem; opacity: .75; }
